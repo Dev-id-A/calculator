@@ -1,0 +1,99 @@
+//Mixins
+@mixin basic-border{
+    border: 3px solid black;
+}
+@mixin page-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+//Styles
+#main{
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+
+    #calculator{
+        @media only screen and (max-width: 768px){
+            width: 70%;
+            padding: 3% 3% 0 3%;
+        }        
+        @media only screen and (min-width: 768px){
+            width: 50%;
+        }
+        @media only screen and (min-width: 1024px){
+            width: 25%;
+        } 
+        @include page-center();
+        @include basic-border();
+        height: 60%;
+        padding: 3% 1.5% 0 1.5%;
+        background-color: rgb(87, 87, 87);
+
+        #display-box{
+            background-color: rgb(57, 114, 0);
+            align-items: center;
+            @include basic-border();
+            height: 15%;
+            @media only screen and (min-width: 1024px) {
+            margin-top: -5%;
+            margin-bottom: 5%;
+            font-family: Share Tech Mono, monospace;
+            }
+            
+            #display{
+                text-align: end;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 50px;
+            }
+        }
+
+        #erasers{
+            height: 12%;
+
+            .btn{
+                height: 100%;
+            }
+        }
+
+        #numbers{
+            .btn{
+                background-color: grey;
+            }
+        }
+
+        #operators{
+            .btn{
+                background-color: rgb(35, 35, 35);
+            }
+        }
+
+        #numbers-and-operators{
+            height: 55%;
+
+            .btn{
+                height: 25%;
+            }
+
+        }
+        
+        #equal-btn{
+            height: 11%;
+
+            #equals{
+                height: 100%;
+                background-color: rgb(24, 24, 103);
+                color: white;
+            }
+        }
+
+        .btn{
+            border-radius: 0;
+            border: 1.5px solid black;
+            font-size: x-large;
+        }
+        
+    }
+}

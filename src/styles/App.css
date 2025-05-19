@@ -1,0 +1,81 @@
+#main {
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+#main #calculator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid black;
+  height: 60%;
+  padding: 3% 1.5% 0 1.5%;
+  background-color: rgb(87, 87, 87);
+}
+@media only screen and (max-width: 768px) {
+  #main #calculator {
+    width: 70%;
+    padding: 3% 3% 0 3%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #main #calculator {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #main #calculator {
+    width: 25%;
+  }
+}
+#main #calculator #display-box {
+  background-color: rgb(57, 114, 0);
+  align-items: center;
+  border: 3px solid black;
+  height: 15%;
+}
+@media only screen and (min-width: 1024px) {
+  #main #calculator #display-box {
+    margin-top: -5%;
+    margin-bottom: 5%;
+    font-family: Share Tech Mono, monospace;
+  }
+}
+#main #calculator #display-box #display {
+  text-align: end;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 50px;
+}
+#main #calculator #erasers {
+  height: 12%;
+}
+#main #calculator #erasers .btn {
+  height: 100%;
+}
+#main #calculator #numbers .btn {
+  background-color: grey;
+}
+#main #calculator #operators .btn {
+  background-color: rgb(35, 35, 35);
+}
+#main #calculator #numbers-and-operators {
+  height: 55%;
+}
+#main #calculator #numbers-and-operators .btn {
+  height: 25%;
+}
+#main #calculator #equal-btn {
+  height: 11%;
+}
+#main #calculator #equal-btn #equals {
+  height: 100%;
+  background-color: rgb(24, 24, 103);
+  color: white;
+}
+#main #calculator .btn {
+  border-radius: 0;
+  border: 1.5px solid black;
+  font-size: x-large;
+}/*# sourceMappingURL=App.css.map */
